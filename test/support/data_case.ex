@@ -22,6 +22,7 @@ defmodule CG.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import CG.DataCase
+      import CG.Factory
     end
   end
 

@@ -20,6 +20,7 @@ defmodule CG.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
       alias CG.Router.Helpers, as: Routes
+      import CG.Factory
 
       # The default endpoint for testing
       @endpoint CG.Endpoint

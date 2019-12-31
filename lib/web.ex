@@ -55,6 +55,15 @@ defmodule CG.Web do
     end
   end
 
+  def schema do
+    quote do
+      use Ecto.Schema
+      import Ecto.Changeset
+      @primary_key {:id, :binary_id, autogenerate: true}
+      @foreign_key_type :binary_id
+    end
+  end
+
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
   """
