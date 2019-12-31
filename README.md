@@ -1,6 +1,7 @@
 # CG
 
 [![CircleCI](https://circleci.com/gh/ChurchGoals/ChurchGoals-API.svg?style=svg&circle-token=7292c8dea69e10a92d3f5029890659f82291bf50)](https://circleci.com/gh/ChurchGoals/ChurchGoals-API)
+[![Coverage Status](https://coveralls.io/repos/github/ChurchGoals/ChurchGoals-API/badge.svg?branch=master)](https://coveralls.io/github/ChurchGoals/ChurchGoals-API?branch=master)
 
 ## Installing elixir language
 https://elixircasts.io/installing-elixir-with-asdf
