@@ -10,6 +10,7 @@ jobs:
       - run: mix local.rebar --force
       - run: mix local.hex --force
       - run: MIX_ENV=test mix deps.get
+      - run: MIX_ENV=test mix compile
       - run: MIX_ENV=test mix ecto.setup
       - run: MIX_ENV=test mix credo
       - run: MIX_ENV=test mix test
