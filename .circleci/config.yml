@@ -14,7 +14,6 @@ jobs:
       - run: MIX_ENV=test mix ecto.setup
       - run: MIX_ENV=test mix credo
       - run: MIX_ENV=test mix test
-      - run: MIX_ENV=test mix coveralls.circle
   deploy:
     requires:
       - test
