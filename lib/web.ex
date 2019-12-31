@@ -1,12 +1,12 @@
-defmodule CGWeb do
+defmodule CG.Web do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use CGWeb, :controller
-      use CGWeb, :view
+      use CG.Web, :controller
+      use CG.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,26 +19,24 @@ defmodule CGWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: CGWeb
+      use Phoenix.Controller, namespace: CG
 
       import Plug.Conn
-      import CGWeb.Gettext
-      alias CGWeb.Router.Helpers, as: Routes
+      import CG.Gettext
+      alias CG.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
-      use Phoenix.View,
-        root: "lib/cg_web/templates",
-        namespace: CGWeb
+      use Phoenix.View, root: "lib/templates", namespace: CG
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import CGWeb.ErrorHelpers
-      import CGWeb.Gettext
-      alias CGWeb.Router.Helpers, as: Routes
+      import CG.ErrorHelpers
+      import CG.Gettext
+      alias CG.Router.Helpers, as: Routes
     end
   end
 
@@ -53,7 +51,7 @@ defmodule CGWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import CGWeb.Gettext
+      import CG.Gettext
     end
   end
 

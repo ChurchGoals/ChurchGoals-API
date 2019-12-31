@@ -1,4 +1,4 @@
-defmodule CGWeb.ErrorHelpers do
+defmodule CG.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule CGWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(CGWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(CG.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(CGWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(CG.Gettext, "errors", msg, opts)
     end
   end
 end

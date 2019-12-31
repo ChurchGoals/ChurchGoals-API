@@ -6,7 +6,7 @@ import Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :cg, CGWeb.Endpoint,
+config :cg, CG.Endpoint,
   http: [port: 3300],
   debug_errors: true,
   code_reloader: true,

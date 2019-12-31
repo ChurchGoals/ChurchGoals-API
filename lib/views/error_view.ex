@@ -1,5 +1,5 @@
-defmodule CGWeb.ErrorView do
-  use CGWeb, :view
+defmodule CG.ErrorView do
+  use CG.Web, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

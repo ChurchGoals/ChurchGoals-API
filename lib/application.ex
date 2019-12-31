@@ -11,7 +11,7 @@ defmodule CG.Application do
       # Start the Ecto repository
       CG.Repo,
       # Start the endpoint when the application starts
-      CGWeb.Endpoint
+      CG.Endpoint
       # Starts a worker by calling: CG.Worker.start_link(arg)
       # {CG.Worker, arg},
     ]
@@ -25,7 +25,7 @@ defmodule CG.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    CGWeb.Endpoint.config_change(changed, removed)
+    CG.Endpoint.config_change(changed, removed)
     :ok
   end
 end

@@ -13,10 +13,10 @@ config :cg,
   generators: [binary_id: true]
 
 # Configures the endpoint
-config :cg, CGWeb.Endpoint,
+config :cg, CG.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "AAy8peyS/QwOXineqxtp9oH+GNZ4gvM77IrSsR3E8BXPvaHKKSGyNNpGmtPJsX0J",
-  render_errors: [view: CGWeb.ErrorView, accepts: ~w(json)],
+  render_errors: [view: CG.ErrorView, accepts: ~w(json)],
   pubsub: [name: CG.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

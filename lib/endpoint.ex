@@ -1,7 +1,7 @@
-defmodule CGWeb.Endpoint do
+defmodule CG.Endpoint do
   use Phoenix.Endpoint, otp_app: :cg
 
-  socket "/socket", CGWeb.UserSocket,
+  socket "/socket", CG.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -40,5 +40,5 @@ defmodule CGWeb.Endpoint do
     key: "_cg_key",
     signing_salt: "yw0AERbe"
 
-  plug CGWeb.Router
+  plug CG.Router
 end
