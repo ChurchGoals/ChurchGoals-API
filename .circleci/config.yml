@@ -1,0 +1,35 @@
+jobs:
+  test:
+    docker:
+      - image: bitwalker/alpine-elixir-phoenix:1.9.1.1.9
+      - image: circleci/postgres:11.4-ram
+    working_directory: ~/cg
+    steps:
+      - checkout
+      - run: scripts/setup.sh
+      - run: mix local.rebar --force
+      - run: mix local.hex --force
+      - run: MIX_ENV=test mix deps.get
+      - run: MIX_ENV=test mix ecto.setup
+      - run: MIX_ENV=test mix credo
+      - run: MIX_ENV=test mix test
+      - run: MIX_ENV=test mix coveralls 
+  deploy:
+    requires:
+      - test
+    filters:
+      branches:
+        only:
+          - master
+    docker:
+      - image: bitwalker/alpine-elixir-phoenix:1.9.1.1.9
+    working_directory: ~/cg
+    steps:
+      - checkout
+      - run: echo 'deploy now'
+workflows:
+  version: 2
+  test_and_deploy:
+    jobs:
+      - test
+      - deploy
