@@ -17,6 +17,7 @@ defmodule CG.MixProject do
         extras: ["README.md"]
       ],
       start_permanent: Mix.env() == :prod,
+      test_coverage: [tool: ExCoveralls],
       aliases: aliases(),
       deps: deps()
     ]
