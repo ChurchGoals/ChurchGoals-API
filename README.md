@@ -1,4 +1,4 @@
-# CG
+# Church Goals API
 
 [![CircleCI](https://circleci.com/gh/ChurchGoals/ChurchGoals-API.svg?style=svg&circle-token=7292c8dea69e10a92d3f5029890659f82291bf50)](https://circleci.com/gh/ChurchGoals/ChurchGoals-API)
 
